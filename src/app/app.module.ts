@@ -1,3 +1,4 @@
+import { NgBootstrapWrapperModule } from './wrappers/ng-bootstrap/ng-bootstrap-wrapper/ng-bootstrap-wrapper.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgBootstrapWrapperModule
   ],
   providers: [
     provideClientHydration()
