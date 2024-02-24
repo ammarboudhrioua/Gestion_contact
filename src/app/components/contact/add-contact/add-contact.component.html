@@ -1,0 +1,17 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label for="prenom">prenom:</label>
+    <input type="text" id="prenom" formControlName="prenom" />
+
+    <label for="nom">nom:</label>
+    <input type="email" id="nom" formControlName="nom" />
+
+    <label for="telephone">telephone:</label>
+    <textarea id="telephone" formControlName="telephone"></textarea>
+
+    <label for="email">email:</label>
+    <input type="email" id="email" formControlName="email" />
+
+
+
+    <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+  </form>
