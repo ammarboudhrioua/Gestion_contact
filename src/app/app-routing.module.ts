@@ -3,16 +3,11 @@ import { RouterModule, Routes, withComponentInputBinding } from '@angular/router
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 
 const routes: Routes = [
-  {
-    path: '',
+  { path:'contacts',
     component: DashboardComponent,
-    children: [
-      {
-        path: 'contacts',
-        loadChildren: () => import('./components/contact/contact.module').then(m => m.ContactModule)
-      }
-    ]
+    loadChildren: () => import('./components/contact/contact.module').then(m => m.ContactModule)
   },
+  { path: '', redirectTo: '/contacts', pathMatch: 'full' },
 ];
 
 @NgModule({

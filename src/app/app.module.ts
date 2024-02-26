@@ -1,8 +1,5 @@
-import { NgBootstrapWrapperModule } from './wrappers/ng-bootstrap/ng-bootstrap-wrapper/ng-bootstrap-wrapper.module';
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { provideClientHydration } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/user/users/users.component';
 import { AddUserComponent } from './components/user/add-user/add-user.component';
@@ -14,7 +11,6 @@ import { SidebarComponent } from './components/dashboard/sidebar/sidebar.compone
 @NgModule({
   declarations: [
     AppComponent,
-
     UsersComponent,
     AddUserComponent,
     UpdateUserComponent,
@@ -22,9 +18,6 @@ import { SidebarComponent } from './components/dashboard/sidebar/sidebar.compone
     SidebarComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgBootstrapWrapperModule,
     SharedModule
   ],
   providers: [
